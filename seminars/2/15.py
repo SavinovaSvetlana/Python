@@ -20,4 +20,4 @@ for i in range(number_watermelon - 1):
         max_weight = weight
     elif weight < min_weight:
         min_weight = weight
-print(f'Минимальный вес = {min_weight}. Максимальный вес = {max_weight}')
+# print(f'Минимальный вес = {min_weight}. Максимальный вес = {max_weight}')
