@@ -10,21 +10,40 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
+# import random
+# number_day = int(input('Введите количество дней: '))
+# max_temp = 0
+# min_temp = 0
+# count_1 = 0
+# count_2 = 0
+# for i in range(number_day):
+#     temp = random.randint(-2, 2)
+#     print(f'Температура {i + 1} дня {temp}')
+#     if temp > max_temp:
+#         count_1 += 1
+#     else:
+#         count = 0
+#     if temp <= min_temp:
+#         count_2 += 1
+#     else:
+#         count = 0
+# print(f'Тепло {count_1} холодно {count_2}')
+
 import random
-number_day = int(input('Введите количество дней: '))
-max_temp = 0
-min_temp = 0
-count_1 = 0
-count_2 = 0
-for i in range(number_day):
-    temp = random.randint(-2, 2)
-    print(f'Температура {i + 1} дня {temp}')
-    if temp > max_temp:
-        count_1 += 1
+
+count_day = int(input('Введите количество дней: '))
+temp = 0
+count = 0
+count_max = 0
+for i in range(count_day):
+    temp += random.randint(-2, 2)
+    print(temp, end=", ")
+    if temp > 0:
+        count += 1
     else:
+        if count > 0:
+            print(f"_{count}_")
         count = 0
-    if temp <= min_temp:
-        count_2 += 1
-    else:
-        count = 0
-print(f'Тепло {count_1} холодно {count_2}')
+    if count > count_max:
+        count_max = count
+print('\n', count_max)
