@@ -14,6 +14,7 @@ import random
 # print(new_list)
 # print(len(new_list))
 
+
 my_list = [random.randint(0, 10) for _ in range(20)]
 print(my_list)
 print(len(set(my_list)))
