@@ -5,6 +5,14 @@
 
 import random
 
-my_list = [random.randint(1, 100) for _ in range(20)]
-print(my_list)
-desired_number = int(input('Введите число от 1 до 100: '))
+list_1 = [random.randint(1, 100) for _ in range(20)]
+value = int(input('Введите число от 1 до 100: '))
+print(list_1)
+
+found = list_1[0]
+for item in list_1:
+    if abs(item - value) < abs(found - value):
+        found = item
+
+print(f'Число {value} встречается {list_1.count(value)}')
+print(f'Ближайшее число {(found)}')
