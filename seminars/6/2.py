@@ -8,3 +8,15 @@
 # 1 2 3 4 5 1 5 1 5 1
 # Вывод: Вывод:
 # 0 2
+
+import random
+
+list_one = int(input('Введите количество элементов первого списка: '))
+my_list_one = [random.randint(0, 10) for _ in range(list_one)]
+print(my_list_one)
+
+count = 0
+for i in range(-1, list_one - 1):
+    if my_list_one[i - 1] < my_list_one[i] and my_list_one[i + 1] < my_list_one[i]:
+        count += 1
+print(count)
