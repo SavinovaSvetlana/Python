@@ -19,6 +19,7 @@ my_list_two = [random.randint(0, 10) for _ in range(list_two)]
 
 print(my_list_one, my_list_two)
 
+# my_list = [for i in my_list_one if i not in my_list_two] Далее print(my_list)
 my_list = []
 for i in my_list_one:
     if i not in my_list_two:
