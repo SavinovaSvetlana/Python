@@ -18,8 +18,18 @@ number_2 = int(input('Введите второе число: '))
 # degree_number(number_1, number_2)
 
 
+# def degree_number(a, b):
+#     return number_1**number_2
+
+
+# print(degree_number(number_1, number_2))
+
+
 def degree_number(a, b):
-    return number_1**number_2
+    if b == 1:
+        return a
+    else:
+        return a**b
 
 
 print(degree_number(number_1, number_2))
