@@ -8,11 +8,16 @@ import random
 my_list = int(input('Введите количество элементов первого списка: '))
 my_list_one = [random.randint(0, 10) for _ in range(my_list)]
 print(my_list_one)
-temp_list = []
+# temp_list = []
 
-for i in my_list_one:
-    if i % 2 == 0:
-        temp_list.append((i, i ** 2))
+# for i in my_list_one:
+#     if i % 2 == 0:
+#         temp_list.append((i, i ** 2))
 
 
-print(temp_list)
+# print(temp_list)
+
+res = map(int, my_list_one)
+res = filter(lambda x: x % 2 == 0, res)
+res = list(map(lambda x: (x, x**2), res))
+print(res)
